@@ -33,6 +33,12 @@ class TestCase(unittest.TestCase):
         expectedPWD = False
         self.assertEqual(check_pwd(pwd), expectedPWD)
 
+    def test6(self):
+        """checks if string of numbers len 12 fails"""
+        pwd = '123456789012'
+        expectedPWD = False
+        self.assertEqual(check_pwd(pwd), expectedPWD)
+
 
 if __name__ == '__main__':
     unittest.main()
