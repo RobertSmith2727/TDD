@@ -1,8 +1,5 @@
 def check_pwd(password):
-    if len(password) <= 7:
-        return False
-
-    if len(password) == 21:
+    if len(password) <= 7 or len(password) >= 21:
         return False
 
     return True
