@@ -9,6 +9,12 @@ class TestCase(unittest.TestCase):
         expectedPWD = False
         self.assertEqual(check_pwd(pwd), expectedPWD)
 
+    def test2(self):
+        """checks if string len 7 fails, returns false"""
+        pwd = 'aaaaaaa'
+        expectedPWD = False
+        self.assertEqual(check_pwd(pwd), expectedPWD)
+
 
 if __name__ == '__main__':
     unittest.main()
