@@ -27,6 +27,12 @@ class TestCase(unittest.TestCase):
         expextedPWD = False
         self.assertEqual(check_pwd(pwd), expextedPWD)
 
+    def test5(self):
+        """checks if string without lowercase and len 9 fails"""
+        pwd = 'WWWWWWWWW'
+        expectedPWD = False
+        self.assertEqual(check_pwd(pwd), expectedPWD)
+
 
 if __name__ == '__main__':
     unittest.main()
