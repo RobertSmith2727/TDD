@@ -5,4 +5,7 @@ def check_pwd(password):
     if not any(element.islower() for element in password):
         return False
 
+    if password.islower() and password.isalpha():
+        return False
+
     return True
