@@ -8,4 +8,7 @@ def check_pwd(password):
     if not any(element.isupper() for element in password):
         return False
 
+    if not password.isnumeric() and password.isalpha():
+        return False
+
     return True
