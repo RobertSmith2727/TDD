@@ -69,6 +69,13 @@ class TestCase(unittest.TestCase):
         expectedPWD = False
         self.assertEqual(check_pwd(pwd), expectedPWD)
 
+    def test12(self):
+        """checks if string of upper and lowercase and # and bad symbols len
+        10 fails"""
+        pwd = "12{ABa|bCC"
+        expectedPWD = False
+        self.assertEqual(check_pwd(pwd), expectedPWD)
+
 
 if __name__ == '__main__':
     unittest.main()
